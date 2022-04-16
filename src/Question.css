@@ -4,15 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background: var(--clr-purple);
-  letter-spacing: var(--spacing);
-}
-
-html {
-  font-size: 62.5%;
-}
-
 :root {
   --clr-primary-1: #063251;
   --clr-primary-2: #104e7a;
@@ -52,61 +43,55 @@ html {
   --fixed-width: 920px;
 }
 
-.card {
-  width: 950px;
-  height: auto;
-  background: #fff;
-  align-items: self;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  padding: 35px 40px;
-  border-radius: 4px;
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-
-.container {
-  width: 100%;
-  height: auto;
+.question {
+  color: var(--clr-purple);
+  font-weight: bold;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
-@media screen and (max-width: 990px) {
-  .card {
-    width: 90%;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    font-size: 1rem !important;
-  }
-
-  .qea {
-    margin-top: 20px;
-    width: 100%;
-  }
+.circle {
+  background: var(--clr-grey-9);
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: black;
+  font-weight: 100;
+  border: none;
+  cursor: pointer;
 }
 
-.title {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 3rem;
-  font-weight: bold;
-  color: var(--clr-purple);
-  line-height: 1.2;
-  font-weight: 500;
-}
-
-.qea {
+.quest-box {
+  box-shadow: 0 2.5px 7.5px rgba(0, 0, 0, 0.4);
+  border: solid 0.1px rgb(202, 202, 202);
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  font-size: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  padding: 20px;
+}
+
+.answer {
+  display: none;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 990px) {
+  .answer {
+    font-size: 1.4rem;
+  }
+
+  .quest-box {
+    font-size: 1.3rem;
+  }
 }
